@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Release version (e.g. 1.4)"
+        description: "Release version"
         required: true
 
 permissions:
@@ -34,4 +34,4 @@ jobs:
             --base main \
             --head release/${{ inputs.version }} \
             --title "Release ${{ inputs.version }}" \
-            --body "Automated release branch cut from dev. Requires 1 approval before merging to main."
+            --body "Automated release branch cut from dev. Requires approval from Gabi and either Danielle or Dries."
